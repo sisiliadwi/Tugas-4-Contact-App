@@ -1,0 +1,67 @@
+.body, html {
+    background-color: #f8f9fa;
+    height: 100%;
+  }
+
+.sidebar {
+    background-color: #c1e1e4;
+    color: #477585;
+    height: 100vh;
+    border-radius: 15px;
+  }
+.sidebar ul {
+    padding: 0;
+  }
+.sidebar li {
+    padding: 10px 20px;
+    font-weight: 500;
+    border-bottom: 1px solid #ffffff;
+  }
+.sidebar li:hover {
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+.content {
+    margin-top: 20px;
+  }
+.navbar{
+  background-color: rgb(12, 199, 162);
+}
+.navbar-brand{
+  color: white;
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: rgb(12, 199, 162);
+  color: white;
+}
+.nav-link{
+  border-radius: 25px;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  color: rgb(12, 199, 162);
+  font-weight:normal;
+}
+.nav-link:hover {
+  background-color: #007bff; 
+  color: #fff; 
+}
+
+
+/* STYLE LOGIN PAGE */
