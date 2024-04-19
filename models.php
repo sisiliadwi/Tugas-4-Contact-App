@@ -27,8 +27,25 @@ class Contact {
         return $result;
     }    
 
-    static function update() {}
-    static function delete() {}
+    static function update($id, $no_hp, $nama_pemilik, $jenis_kelamin) {
+        global $conn;
+        $sql = "UPDATE db_contact SET no_hp = ?, nama_pemilik = ?, jenis_kelamin = ? WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('ssss', $no_hp, $nama_pemilik, $jenis_kelamin, $id);
+        $stmt->execute();
+        $result = $stmt->affected_rows > 0 ? true : false;
+        return $result;
+    }
+
+    static function delete($id) {
+        global $conn;
+        $sql = "DELETE FROM db_contact WHERE id = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param('s', $id);
+        $stmt->execute();
+        $result = $stmt->affected_rows > 0 ? true : false;
+        return $result;
+    }
 }
 
 ?>
